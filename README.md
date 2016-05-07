@@ -8,7 +8,7 @@
 
 ##Support
 
-[Bismark and Trim_galore! repositories](http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)
+[Bismark and Trim_galore! repositories](http://www.bioinformatics.babraham.ac.uk/projects/index.html)
 
 ##Citations
 
