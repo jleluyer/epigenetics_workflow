@@ -1,10 +1,10 @@
 #!/bin/bash
-#PBS -A bpv-355-aa
-#PBS -N bismarki_index
+#PBS -A userID
+#PBS -N bismark_index
 #PBS -o bismark_index.out
 #PBS -e bismark_index.err
 #PBS -l walltime=24:00:00
-#PBS -M jeremy.le-luyer.1@ulaval.ca
+#PBS -M userEmail
 #PBS -m ea 
 #PBS -l nodes=1:ppn=8
 #PBS -r n
