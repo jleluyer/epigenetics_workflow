@@ -22,7 +22,7 @@ N="-N 5"          # N: Maximum distance allowed to align secondary reads to
                   #   primary stacks (default: M + 2).
 #R="-R"           # R: retain unused reads.
 H="-H"            # H: disable calling haplotypes from secondary reads.
-p="-p 16"         # p: enable parallel execution with num_threads threads.
+p="-p 4"         # p: enable parallel execution with num_threads threads.
 r="-r"            # r: enable the Removal algorithm, to drop highly-repetitive
                   #   stacks (and nearby errors) from the algorithm.
 d="-d"            # d: enable the Deleveraging algorithm, used for resolving
