@@ -7,7 +7,7 @@
 #SBATCH -p ibismini
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=type_your_mail@ulaval.ca
-#SBATCH --time=0-20:00
+#SBATCH --time=1-00:00
 #SBATCH --mem=50000
 
 cd $SLURM_SUBMIT_DIR
