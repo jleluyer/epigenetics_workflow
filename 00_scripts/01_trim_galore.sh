@@ -12,10 +12,6 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 trim_galore [options] <filename(s)>
 '''
 
-
-PWD="__PWD__"
-cd $PWD
-
 #variables
 LENGTH=90
 QUAL=20
