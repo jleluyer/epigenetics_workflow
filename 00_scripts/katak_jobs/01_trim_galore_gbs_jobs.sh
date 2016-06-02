@@ -2,8 +2,8 @@
 #!/bin/bash
 
 #SBATCH -D ./ 
-#SBATCH --job-name="trim_galore_rrbs"
-#SBATCH -o log-trimgalore_rrbs.out
+#SBATCH --job-name="trim_galore_gbs"
+#SBATCH -o log-trimgalore_gbs.out
 #SBATCH -c 1
 #SBATCH -p ibismini
 #SBATCH --mail-type=ALL
@@ -14,4 +14,4 @@
 cd $SLURM_SUBMIT_DIR
 
 
-./00_scripts/01_trim_galore_rrbs.sh
+./00_scripts/01_trim_galore_gbs.sh
