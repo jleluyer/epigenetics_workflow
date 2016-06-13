@@ -17,10 +17,11 @@ trim_galore [options] <filename(s)>
 LENGTH=90
 QUAL=20
 ERROR_RATE="0.2"
+OUTPUT="03_trimmed"
 for file in $(ls 02_data/*gbs*.fq.gz)
 do
 base=$(basename $file)
 
-trim_galore --length $LENGTH --no_report_file -e $ERROR_RATE --illumina -q $QUAL $base 
+trim_galore --length $LENGTH --no_report_file -e $ERROR_RATE --illumina -q $QUAL 02_data/"$base" -o $OUTPUT
 
 done 2>&1 | tee 98_log_files/"$TIMESTAMP"_trimmgalore_gbs.log

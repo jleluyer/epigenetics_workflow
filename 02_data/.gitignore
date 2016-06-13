@@ -3,3 +3,7 @@
 *fastq
 *fastq
 *fq
+*.md5
+*.txt
+*.zip
+run_wget.sh
