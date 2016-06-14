@@ -13,9 +13,9 @@
 cd $SLURM_SUBMIT_DIR
 
 mkdir fastqc_dir
-for file in $(ls 02_data/.*f*q.gz|sed 's/.f(ast)?q.gz//g')
+for file in $(ls 02_data/*.*f*q.gz|sed 's/.f(ast)?q.gz//g')
 do
 base=$(basename $file)
-        mkdir  ./fastqc.dir/"$base".dir
-        fastqc -o ./fastqc.dir/"$base".dir -f fastq "$base".fastq.gz
+        mkdir  ./fastqc_dir/"$base"_dir
+        fastqc -o ./fastqc_dir/"$base"_dir -f fastq "$base".fastq.gz
 done

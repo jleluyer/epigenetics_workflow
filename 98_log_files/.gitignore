@@ -3,3 +3,5 @@
 *fastq
 *fastq
 *fq
+*.log
+*.sh

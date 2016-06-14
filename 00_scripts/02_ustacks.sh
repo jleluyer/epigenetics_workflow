@@ -5,7 +5,7 @@ TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
 # Copy script as it was run
 SCRIPT=$0
 NAME=$(basename $0)
-LOG_FOLDER="98-log_files"
+LOG_FOLDER="98_log_files"
 
 cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
@@ -39,7 +39,7 @@ bound_high="--bound_high 1"
 
 # Launch ustacks for all the individuals
 id=1
-for file in 03_trimmed/*.fastq.gz
+for file in 03_trimmed/*gbs*.fq.gz
 do
     echo -e "\n\n##### Treating individual $id: $file\n\n"
     ustacks $t $o $i $m $M $N $R $H $p $r $d $max_locus_stacks $k_len \

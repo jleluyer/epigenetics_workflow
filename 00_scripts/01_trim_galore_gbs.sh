@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
@@ -18,7 +17,7 @@ LENGTH=90
 QUAL=20
 ERROR_RATE="0.2"
 OUTPUT="03_trimmed"
-for file in $(ls 02_data/*gbs*.fq.gz)
+for file in $(ls 02_data/*gbs*.fastq.gz)
 do
 base=$(basename $file)
 

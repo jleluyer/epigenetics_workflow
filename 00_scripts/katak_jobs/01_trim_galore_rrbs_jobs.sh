@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -D ./ 
-#SBATCH --job-name="trim_galore"
+#SBATCH --job-name="trim_galore_rrbs"
 #SBATCH -o log-trimgalore.out
 #SBATCH -c 1
 #SBATCH -p ibismini
@@ -13,4 +13,4 @@
 cd $SLURM_SUBMIT_DIR
 
 
-./00_scripts/01_trim_galore.sh
+./00_scripts/01_trim_galore_rrbs.sh
