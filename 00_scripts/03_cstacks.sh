@@ -5,7 +5,7 @@ TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
 # Copy script as it was run
 SCRIPT=$0
 NAME=$(basename $0)
-LOG_FOLDER="98-log_files"
+LOG_FOLDER="98_log_files"
 
 cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
@@ -13,13 +13,13 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 # Comment out options that you do not wish to use
 
 b="-b 1"            # b: MySQL ID of this batch
-o="-o 03_trimmed"    # o: output path to write results
+o="-o 04_reference"    # o: output path to write results
 #g="-g"             # g: base catalog matching on genomic location, not sequence
                     #   identity
 #m="-m"             # m: include tags in catalog that match more than one entry
-n="-n 1"            # n: number of mismatches allowed between sample tags when
+n="-n 0"            # n: number of mismatches allowed between sample tags when
                     #   generating the catalog (default 0)
-p="-p 16"           # p: enable parallel execution with num_threads threads
+p="-p 5"           # p: enable parallel execution with num_threads threads
 
 #Catalog editing:
 #catalog="--catalog PATH"   # provide the path to an existing catalog. cstacks will add data to this existing catalog.

@@ -12,7 +12,7 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 # OPTIONS: Comment out options that you do not wish to use
 t="-t gzfastq"    # t: input file Type. Supported types: fasta, fastq, gzfasta,
                   #   or gzfastq
-o="-o 03_trimmed"  # o: output path to write results.
+o="-o 04_reference"  # o: output path to write results.
 #i="-i 1"         # i: SQL ID to insert into the output to identify this sample
 m="-m 4"          # m: Minimum depth of coverage required to create a stack
                   #   (default 3).
