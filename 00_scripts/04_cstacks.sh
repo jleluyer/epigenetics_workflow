@@ -13,7 +13,7 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 # Comment out options that you do not wish to use
 
 b="-b 1"            # b: MySQL ID of this batch
-o="-o 04_reference"    # o: output path to write results
+o="-o 03_trimmed"    # o: output path to write results
 #g="-g"             # g: base catalog matching on genomic location, not sequence
                     #   identity
 #m="-m"             # m: include tags in catalog that match more than one entry
@@ -33,7 +33,7 @@ p="-p 5"           # p: enable parallel execution with num_threads threads
 # -=( DO NOT MODIFY THE FOLLWING OPTION! )=-
 # This will automatically create the list of filenames for cstacks
 # s: filename prefix from which to load loci into the catalog
-s="$(for file in $(ls -1 04_reference/*.tags.tsv.gz | perl -pe 's/\.tags\.tsv\.gz//'); do echo -s $file; done)"
+s="$(for file in $(ls -1 03_trimmed/*.tags.tsv.gz | perl -pe 's/\.tags\.tsv\.gz//'); do echo -s $file; done)"
 
 # Run cstacks
 cstacks $b $s $o $g $m $n $p $catalog $k_len $report_mmatches 2>&1 | tee 98_log_files/"$TIMESTAMP"_cstacks.log

@@ -12,7 +12,7 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 # OPTIONS: Comment out options that you do not wish to use
 t="-t gzfastq"    # t: input file Type. Supported types: fasta, fastq, gzfasta,
                   #   or gzfastq
-o="-o 04_reference"  # o: output path to write results.
+o="-o 03_trimmed"  # o: output path to write results.
 #i="-i 1"         # i: SQL ID to insert into the output to identify this sample
 m="-m 4"          # m: Minimum depth of coverage required to create a stack
                   #   (default 3).
@@ -39,7 +39,7 @@ bound_high="--bound_high 1"
 
 # Launch ustacks for all the individuals
 id=1
-for file in 03_trimmed/*gbs*.fq.gz
+for file in 03_trimmed/*gbs*trunc*.fq.gz
 do
     echo -e "\n\n##### Treating individual $id: $file\n\n"
     ustacks $t $o $i $m $M $N $R $H $p $r $d $max_locus_stacks $k_len \

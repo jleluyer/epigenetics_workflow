@@ -3,3 +3,7 @@
 *fastq
 *fastq
 *fq
+*.txt
+*.bam
+*.gz
+output_extractor/
