@@ -7,3 +7,4 @@
 *.txt
 *.zip
 run_wget.sh
+*.csv
