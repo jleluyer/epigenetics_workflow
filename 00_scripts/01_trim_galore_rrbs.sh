@@ -15,12 +15,12 @@ QUAL=20
 ERROR_RATE="0.2"
 OUTPUT="03_trimmed"
 
-for file in $(ls 02_data/32*RRBS*.fastq.gz|sed 's/.fastq.gz//g')
+for file in $(ls 02_data/*.fastq.gz|sed 's/_R1.fastq.gz//g'|grep -v '.md5')
 do
 
 base=$(basename $file)
 
-trim_galore --rrbs --length $LENGTH --no_report_file -e $ERROR_RATE --illumina -q $QUAL 02_data/"$base".fastq.gz -o $OUTPUT
+trim_galore --rrbs --length $LENGTH --no_report_file -e $ERROR_RATE --illumina -q $QUAL 02_data/"$base"_R1.fastq.gz -o $OUTPUT
 
 done 2>&1 | tee 98_log_files/"$TIMESTAMP"_trimmgalore_rrbs.log
 

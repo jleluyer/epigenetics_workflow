@@ -16,9 +16,6 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
 #variables
 GENOME_FOLDER="04_reference"
-N="-N 1"                        #NB_MISMATCHES
-L="-L 19"                       #seed length
-p="-p 4"                        #THREADS
 
 #prepare genome
 bismark_genome_preparation $GENOME_FOLDER  2>&1 | tee 98_log_files/"$TIMESTAMP"_refindex.log
