@@ -7,3 +7,5 @@
 *.bam
 *.gz
 output_extractor/
+*.cpgplot
+*.gff
