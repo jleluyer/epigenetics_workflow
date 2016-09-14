@@ -10,7 +10,7 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
 
 #variables
-GENOME="okis_uvic.scf.fasta"
+GENOME="Coregonus_clupeaformis_SSscaffolds.fasta"
 GENOME_FOLDER="04_reference"
 OUTPOUT_FOLDER="05_results"
 OUTPUT="genome.cpgcheck"
