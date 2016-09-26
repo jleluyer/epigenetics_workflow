@@ -79,6 +79,19 @@ sbatch 00_scripts/07_bismark_CpG_extractor.sh
 
 ### 7. Downstream analysis
 
+##### 7.1 SNPs calling
+
+**Import BS-SNPer**
+```
+git clone https://github.com/hellbelly/BS-Snper
+cd cd BS-Snper-master
+sh BS-Snper.sh
+```
+**launch BS-SNPer**
+
+```
+sbatch 00_scripts/11_bssnper.sh
+```
 
 ## Notes
 
@@ -94,6 +107,8 @@ sbatch 00_scripts/07_bismark_CpG_extractor.sh
 
 [STACKS](http://catchenlab.life.illinois.edu/stacks/)
 
+[BS-SNPer](https://github.com/hellbelly/BS-Snper)
+
 ## Licence
 
 
@@ -104,6 +119,7 @@ F. Krueger, S. R. Andrews (2011). Bismark: a flexible aligner and methylation ca
 J. M. Catchen, A. Amores, P. Hohenlohe. W.Cresko, J. H. Postlethwai (2011). Stacks: guilding and genotyping loci de novo from short-read sequences
 [doi:  10.1534/g3.111.000240](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3276136/)
 
+G. Shengjie, Z. Dan, M. Likai, et al. BS-SNPer: SNP calling in bisulfite-seq data. Bioinformatics, 2015, 31(24): 4006-4008.[doi:  10.1093/bioinformatics/btv507](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4673977/)
 
 **_worflow in progress_**
 
