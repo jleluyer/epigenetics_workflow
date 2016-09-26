@@ -13,7 +13,7 @@
 cd $SLURM_SUBMIT_DIR
 
 
-for i in $(ls input_bam/*_R1_trimmed.fq_bismark_bt2.bam|sed 's/_R1_trimmed.fq_bismark_bt2.bam//g')
+for i in $(ls 03_trimmed/*_R1_trimmed.fq_bismark_bt2.bam|sed 's/_R1_trimmed.fq_bismark_bt2.bam//g')
 do
 base="$(basename $i)"
 
