@@ -72,7 +72,6 @@ sbatch 00_scripts/06_bismark_align.sh
 
 ### 6. Methylation calls
 
-
 ```
 sbatch 00_scripts/07_bismark_CpG_extractor.sh
 ```
@@ -84,7 +83,7 @@ sbatch 00_scripts/07_bismark_CpG_extractor.sh
 **Import BS-SNPer**
 ```
 git clone https://github.com/hellbelly/BS-Snper
-cd cd BS-Snper-master
+cd BS-Snper-master
 sh BS-Snper.sh
 ```
 **launch BS-SNPer**
