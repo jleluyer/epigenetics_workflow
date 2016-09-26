@@ -13,17 +13,16 @@
 cd $SLURM_SUBMIT_DIR
 
 
-for i in $(ls 03_trimmed/*_R1_trimmed.fq_bismark_bt2.bam|sed 's/_R1_trimmed.fq_bismark_bt2.bam//g')
+for i in $(ls 05_results/*_R1_trimmed.fq_bismark_bt2.bam|sed 's/_R1_trimmed.fq_bismark_bt2.bam//g')
 do
-base="$(basename $i)"
 
-samtools sort input_bam/"$base"_R1_trimmed.fq_bismark_bt2.bam >input_bam/"$base".sort.bam
+base="$(basename $i)"
+samtools sort 05_results/"$base"_R1_trimmed.fq_bismark_bt2.bam >05_results/"$base".sort.bam
 
 #Global variables
-
         REF="--fa /home/jelel8/Databases/genome/Okisutch/okis_uvic.scf.fasta"   #: Reference genome file in fasta format
-        INPUT=$(echo "--input 03_trimmed/"$base".sort.bam")           #Input bam file
-        OUTPUT=$(echo "--output 03_trimmed/temp."$base".out")                 #Temporary file storing SNP candidates
+        INPUT=$(echo "--input 05_results/"$base".sort.bam")           #Input bam file
+        OUTPUT=$(echo "--output 05_Results/temp."$base".out")                 #Temporary file storing SNP candidates
         CG=$(echo "--methcg "$base".cg")                #CpG methylation information
         CHG=$(echo "--methchg "$base".chg")             #CHG methylation information
         CHH=$(echo "--methchh "$base".chh")             #CHH methylation information
@@ -35,10 +34,6 @@ samtools sort input_bam/"$base"_R1_trimmed.fq_bismark_bt2.bam >input_bam/"$base"
         MINREAD="--minread2 1"          #Minimum mutation reads number
         ERR="--errorate 0.02"           #Minimum mutation rate
         MAPVAL="--mapvalue 1"           #Minimum read mapping value
-        #SNP.out: Final SNP result file
-        #ERR.log: Log file
 
-
-perl /home/jelel8/test_bs-snper/BS-Snper/BS-Snper.pl $REF $INPUT $OUTPUT $CG $CHH $CHG $MINHETFREQ $MINHOMFREQ $MINQUAL $MINCOV $MAXCOV $MINREAD $ERR $MAPVAL >"$base".out 2>"$base".log
-
+perl BS-Snper.pl $REF $INPUT $OUTPUT $CG $CHH $CHG $MINHETFREQ $MINHOMFREQ $MINQUAL $MINCOV $MAXCOV $MINREAD $ERR $MAPVAL >05_results/"$base".out 2>"$base".log
 done
