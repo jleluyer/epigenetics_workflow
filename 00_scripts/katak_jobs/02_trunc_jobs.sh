@@ -13,4 +13,4 @@
 cd $SLURM_SUBMIT_DIR
 
 
-./00_scripts/02_truncate.sh
+00_scripts/02_truncate.sh
