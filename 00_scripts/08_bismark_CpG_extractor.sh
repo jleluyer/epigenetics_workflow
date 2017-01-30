@@ -10,9 +10,9 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 module load bamtools/2.4.0
 
 #Global variables
-PATHOUTPUT="/home/jelel8/madoka_krick/epigenetics_workflow/05_results/output_extractor/"
-GENOMEFOLDER="/home/jelel8/madoka_krick/epigenetics_workflow/04_reference/"
-PATHTOFILE="/home/jelel8/madoka_krick/epigenetics_workflow/05_results"
+PATHOUTPUT="/home/jelel8/epic4_projects/epigenetics_hatchery/03_epigenetics_workflow/05_results/output_extractor/"
+GENOMEFOLDER="/home/jelel8/epic4_projects/epigenetics_hatchery/03_epigenetics_workflow/04_reference/"
+PATHTOFILE="/home/jelel8/epic4_projects/epigenetics_hatchery/03_epigenetics_workflow/05_results"
 NCPU=4
 
 
