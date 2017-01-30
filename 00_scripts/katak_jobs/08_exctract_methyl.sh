@@ -4,8 +4,8 @@
 #SBATCH --job-name="EPIextract"
 #SBATCH -o log-extract.out
 #SBATCH -c 4
-#SBATCH -p ibismax
-#SBATCH -A ibismax
+#SBATCH -p low-cancel
+####SBATCH -A ibismax
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=type_your_mail@ulaval.ca
 #SBATCH --time=2-00:00
