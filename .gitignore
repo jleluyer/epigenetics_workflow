@@ -1,3 +1,4 @@
 *.out
 fastqc_dir
 *.sh
+output_manitou
