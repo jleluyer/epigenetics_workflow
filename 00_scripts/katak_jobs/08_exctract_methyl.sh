@@ -3,7 +3,7 @@
 #SBATCH -D ./ 
 #SBATCH --job-name="EPIextract"
 #SBATCH -o log-extract.out
-#SBATCH -c 4
+#SBATCH -c 10
 #SBATCH -p ibismax
 #SBATCH -A ibismax
 #SBATCH --mail-type=ALL
@@ -12,6 +12,5 @@
 #SBATCH --mem=20000
 
 cd $SLURM_SUBMIT_DIR
-
 
 ./00_scripts/08_bismark_CpG_extractor.sh

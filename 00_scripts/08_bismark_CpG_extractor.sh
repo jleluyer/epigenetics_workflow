@@ -16,7 +16,7 @@ PATHTOFILE="/home/jelel8/epic4_projects/epigenetics_hatchery/03_epigenetics_work
 NCPU=4
 
 
-for i in $(ls 05_results/*_bismark_bt2.bam)
+for i in $(ls 05_results/output_extractor/*_bismark_bt2.bam)
 
 do
 

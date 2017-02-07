@@ -6,3 +6,4 @@
 *.log
 *.sh
 *_script
+log*
