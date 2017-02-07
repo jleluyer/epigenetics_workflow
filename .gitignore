@@ -2,3 +2,4 @@
 fastqc_dir
 *.sh
 output_manitou
+list*
