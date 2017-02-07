@@ -4,11 +4,11 @@ library(GenomicRanges)
 
 
 #load Data
-data216dmr <-read.table("05_results/dataframe/GRange_dmr216.txt",header=T,sep="\t")
-dataCpG.5 <-read.table("05_results/dataframe/GRange_meth5.txt",header=T,sep="\t")
-dataCpG.10 <-read.table("05_results/dataframe/GRange_meth10.txt",header=T,sep="\t")
-#datatrans <-read.table("05_results/dataframe/GRange_trans.txt",header=T,sep="\t")
-datadmr <-read.table("05_results/dataframe/GRange_dmr.txt",header=T,sep="\t")
+data216dmr <-read.table("05_results/dataframe/iranges/GRange_dmr216.txt",header=T,sep="\t")
+dataCpG.5 <-read.table("05_results/dataframe/iranges/GRange_meth5.txt",header=T,sep="\t")
+dataCpG.10 <-read.table("05_results/dataframe/iranges/GRange_meth10.txt",header=T,sep="\t")
+datatrans <-read.table("05_results/dataframe/iranges/GRange_trans.txt",header=T,sep="\t")
+datadmr <-read.table("05_results/dataframe/iranges/GRange_dmr.txt",header=T,sep="\t")
 #dataSNP<-read.table("~/Desktop/data_epi/list_Iranges_snp.txt", header=T)
 
 #load("~/Desktop/myobj.Rda")
